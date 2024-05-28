@@ -1,2 +1,7 @@
-package za.ac.cput.entity;public enum AccountType {
+package za.ac.cput.entity.enums;
+
+public enum AccountType {
+    SAVINGS_ACCOUNT,
+    INVESTMENT_ACCOUNT,
+    BUSINESS_ACCOUNT
 }
