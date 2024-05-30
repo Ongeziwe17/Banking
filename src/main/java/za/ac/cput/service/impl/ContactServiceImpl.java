@@ -10,10 +10,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-public class ContactImpl implements IContactService {
+public class ContactServiceImpl implements IContactService {
     private final ContactRepository repository;
     @Autowired
-    public ContactImpl(ContactRepository repository) {
+    public ContactServiceImpl(ContactRepository repository) {
         this.repository = repository;
     }
 

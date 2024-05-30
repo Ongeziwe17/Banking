@@ -10,18 +10,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-public class AccountHolderImpl implements IAccountHolderService {
+public class AccountHolderServiceImpl implements IAccountHolderService {
 
     private final AccountHolderRepository repository;
     @Autowired
-    public AccountHolderImpl(AccountHolderRepository repository) {
+    public AccountHolderServiceImpl(AccountHolderRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public AccountHolder create(AccountHolder accountHolder) {
-        return repository.save(accountHolder);
-    }
+    public AccountHolder create(AccountHolder accountHolder) {  return repository.save(accountHolder); }
 
     @Override
     public AccountHolder read(Long accountHolderId) {

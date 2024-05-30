@@ -1,7 +1,6 @@
 package za.ac.cput.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import za.ac.cput.entity.enums.AccountType;
 
 import java.time.LocalDate;
@@ -12,6 +11,7 @@ import java.util.Objects;
 public class Account {
     @Id
     private long accountId;
+    @Enumerated(EnumType.STRING)
     private AccountType accountType;
     private LocalDateTime dateCreated;
     private LocalDate expiryDate;

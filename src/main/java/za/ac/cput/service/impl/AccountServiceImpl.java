@@ -10,11 +10,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-public class AccountImpl implements IAccountService {
+public class AccountServiceImpl implements IAccountService {
 
     private final AccountRepository repository;
     @Autowired
-    public AccountImpl(AccountRepository repository) {
+    public AccountServiceImpl(AccountRepository repository) {
         this.repository = repository;
     }
 

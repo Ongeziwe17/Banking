@@ -10,13 +10,13 @@ public class AccountHolder {
     private long accountHolderId;
     @Embedded
     private Name name;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "email")
     private Contact contact;
     @Embedded
     private Address address;
-    @OneToOne
-    @JoinColumn(name = "account_id")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "account_Id")
     private  Account account;
 
     protected AccountHolder() {}
